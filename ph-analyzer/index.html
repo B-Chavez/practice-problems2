@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Analyer</title>
+</head>
+<body>
+    <script>
+        console.log(phAnalyzer(7));
+        console.log(phAnalyzer(4));
+        console.log(phAnalyzer(12));     
+        console.log(phAnalyzer(25));
+
+
+        function phAnalyzer(pH){
+            if(pH >= 0 && pH <= 6){
+                return "acidic"
+            } else if(pH === 7){
+                return "neutral"
+            } else if(pH >= 8 && pH <= 14){
+                return "akaline"
+            } else{
+                return "invalid pH value"
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
