@@ -9,12 +9,18 @@
     <script>
         
         function wordBuilder(wordToSpell){
-            var myArray = [];
+            var placeholder = '';
+        var myArray = [];
             for(var i = 0; i < wordToSpell.length; i++){
-                myArray.push(wordToSpell[i])
-                console.log(myArray.join(''))
+                placeholder += wordToSpell[i];
+                myArray.push(placeholder)
             }
+            return myArray
         }
+
+        console.log(wordBuilder("Javascript"))
+        console.log(wordBuilder("Moon"))
+        console.log(wordBuilder("Stars"))
     </script>
 </body>
 </html>
