@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zip Code Validator</title>
+</head>
+<body>
+    <script>
+        function zipCodeValidator(zipToValidate){
+            var whiteSpaceBoolean = false; 
+            var numericBoolean = false;
+            for(var i = 0; i < zipToValidate.length; i++){
+                if(zipToValidate[i] === " "){
+                    whiteSpaceBoolean = true;
+                }
+                if(isNumeric(zipToValidate[i]) === true){
+                    numericBoolean = true;
+                }
+            }
+            if(zipToValidate.length === 5 && whiteSpaceBoolean === false && numericBoolean === true){
+                return true;
+            } else { 
+                return false
+            }
+        }
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+    </script>
+</body>
+</html>
