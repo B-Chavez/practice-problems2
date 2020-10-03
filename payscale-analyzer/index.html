@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payscale Analyzer</title>
+</head>
+<body>
+    <script>
+        var largeNumber;
+        var smallNumber;
+        function payscaleAnalyzer(payList){
+            largeNumber = Math.max(...payList);
+            smallNumber = Math.min(...payList);
+            return largeNumber - smallNumber;
+        }
+    </script>
+</body>
+</html>
